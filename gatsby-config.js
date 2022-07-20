@@ -4,6 +4,7 @@ module.exports = {
     title: `Udie Quest`,
   },
   plugins: [
+    "gatsby-plugin-netlify-cms",
     "gatsby-plugin-image",
     "gatsby-plugin-sharp",
     {
