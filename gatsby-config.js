@@ -7,6 +7,7 @@ module.exports = {
     "gatsby-plugin-netlify-cms",
     "gatsby-plugin-image",
     "gatsby-plugin-sharp",
+    "gatsby-plugin-postcss",
     {
       resolve: `gatsby-plugin-page-creator`,
       options: {

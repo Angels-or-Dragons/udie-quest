@@ -2,9 +2,9 @@ import * as React from 'react'
 import { Link } from 'gatsby'
 import Layout from '../../components/layout'
 
-const RaidIndexPage = () => {
+const RaidIndexPage = ({location}) => {
   return (
-    <Layout pageTitle="Accueil Raids">
+    <Layout location={location} pageTitle="Accueil Raids">
       <p>Accueil Raids</p>
       <nav>
         <ul>

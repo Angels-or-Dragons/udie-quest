@@ -15,6 +15,7 @@
     "clean": "gatsby clean"
   },
   "dependencies": {
+    "@headlessui/react": "^1.6.6",
     "@mdx-js/mdx": "v1",
     "@mdx-js/react": "v1",
     "gatsby": "^4.19.0",
@@ -26,6 +27,14 @@
     "gatsby-source-filesystem": "^4.19.0",
     "netlify-cms-app": "^2.15.72",
     "react": "^18.1.0",
-    "react-dom": "^18.1.0"
+    "react-dom": "^18.1.0",
+    "react-icons": "^4.4.0",
+    "react-toggle": "^4.1.3"
+  },
+  "devDependencies": {
+    "autoprefixer": "^10.4.7",
+    "gatsby-plugin-postcss": "^5.19.0",
+    "postcss": "^8.4.14",
+    "tailwindcss": "^3.1.6"
   }
 }

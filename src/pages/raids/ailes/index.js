@@ -4,9 +4,9 @@ import { Link, graphql } from 'gatsby'
 import { MDXRenderer } from 'gatsby-plugin-mdx'
 import Layout from '../../../components/layout'
 
-const RaidAilesPage = ({ data }) => {
+const RaidAilesPage = ({ location, data }) => {
   return (
-    <Layout pageTitle="Liste des ailes">
+    <Layout location={location} pageTitle="Liste des ailes">
       {
         data.allFile.nodes.map(node => (
 

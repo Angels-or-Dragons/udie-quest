@@ -3,9 +3,12 @@ import { Link, graphql } from 'gatsby'
 import { MDXRenderer } from 'gatsby-plugin-mdx'
 import Layout from '../../../components/layout'
 
-const RaidBuildsPage = ({ data }) => {
+const RaidBuildsPage = ({ data, location }) => {
+  const params = new URLSearchParams(location.search);
+  const profession = params.get('profession')
+  console.log(profession)
   return (
-    <Layout pageTitle="Liste des builds">
+    <Layout pageTitle="Liste des builds" location={location}>
       {
         data.allFile.nodes.map(node => (
 

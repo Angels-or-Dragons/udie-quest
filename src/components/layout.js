@@ -1,8 +1,13 @@
-import * as React from 'react'
-import { Link, useStaticQuery, graphql } from 'gatsby'
-import { container } from './layout.module.css'
+import React, { useContext } from 'react';
+import { useStaticQuery, graphql } from 'gatsby';
 
-const Layout = ({ pageTitle, children }) => {
+import { ThemeContext } from '../context/themeContext';
+import Navbar from './navbar';
+import Header from './header';
+
+
+const Layout = ({ pageTitle, location, children }) => {
+
   const data = useStaticQuery(graphql`
     query {
       site {
@@ -13,24 +18,21 @@ const Layout = ({ pageTitle, children }) => {
     }
   `)
 
+  const { theme } = useContext(ThemeContext);
+
   return (
-    <div className={container}>
+    <div className={`${theme === 'light' ? 'theme-light' : 'theme-dark' } bg-primary text-main-text transition-all duration-300 m-0 p-0 min-h-screen`}>
       <title>{pageTitle} | {data.site.siteMetadata.title}</title>
-      <header>{data.site.siteMetadata.title}</header>
-      <title>{pageTitle}</title>
-      <nav>
-        <ul>
-          <li><Link to="/">Home</Link></li>
-          <li><Link to="/about">About</Link></li>
-          <li><Link to="/raids">Raids</Link></li>
-          <li><Link to="/wvw">McM</Link></li>
-        </ul>
-      </nav>
-      <main>
-        <h1>{pageTitle}</h1>
-        {children}
-      </main>
+      <Navbar />
+      <Header location={location} pageTitle={pageTitle}/>
+      <div className="container mx-auto">
+        <main>
+          <h1>{pageTitle}</h1>
+          {children}
+        </main>
+      </div>
     </div>
   )
 }
+
 export default Layout
