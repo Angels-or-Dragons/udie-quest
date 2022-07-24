@@ -18,6 +18,18 @@
   --accent: 252 119 83;
 }
 
+/* Header */
+.primary-gradient {
+  background: linear-gradient(
+    90deg,
+    rgba(0,0,0,0) 0%,
+    rgba(var(--primary)/0.5) 5%,
+    rgba(var(--primary)/0.83) 15%,
+    rgba(var(--primary)/0.83) 85%,
+    rgba(var(--primary)/0.5) 95%,
+    rgba(0,0,0,0) 100%);
+}
+
 /* React Toggle */
 .react-toggle {
   touch-action: pan-x;

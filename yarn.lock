@@ -6789,6 +6789,29 @@ gatsby-telemetry@^3.19.0:
     lodash "^4.17.21"
     node-fetch "^2.6.7"
 
+gatsby-transformer-json@^4.19.0:
+  version "4.19.0"
+  resolved "https://registry.yarnpkg.com/gatsby-transformer-json/-/gatsby-transformer-json-4.19.0.tgz#2016e67cfb787dcde122f7b617c0982a873e4828"
+  integrity sha512-0Bw0n6JLNBDt2a/cC4HMANSOWSlLidSi4HW6d2L47EPu0TXgouJWJ3cNqi6MiBerb2XT9eJuhFVfS8RkjX34aA==
+  dependencies:
+    "@babel/runtime" "^7.15.4"
+    bluebird "^3.7.2"
+
+gatsby-transformer-sharp@^4.19.0:
+  version "4.19.0"
+  resolved "https://registry.yarnpkg.com/gatsby-transformer-sharp/-/gatsby-transformer-sharp-4.19.0.tgz#0acc603d1368c44033acf01bd8d061adb61e3858"
+  integrity sha512-SoY9yGNjC+C+gAfJ//+DqXGBukVKeb4HnobOmkpbugYtLGRwb4AhKOT7eqCn+AK/4+oDDB3ZNNfTUf0vRFQgzA==
+  dependencies:
+    "@babel/runtime" "^7.15.4"
+    "@gatsbyjs/potrace" "^2.2.0"
+    bluebird "^3.7.2"
+    common-tags "^1.8.2"
+    fs-extra "^10.1.0"
+    gatsby-plugin-utils "^3.13.0"
+    probe-image-size "^7.2.3"
+    semver "^7.3.7"
+    sharp "^0.30.3"
+
 gatsby-worker@^1.19.0:
   version "1.19.0"
   resolved "https://registry.yarnpkg.com/gatsby-worker/-/gatsby-worker-1.19.0.tgz#636ab3f8cb1d24d51cac5b5216b49e46379cf866"

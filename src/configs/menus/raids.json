@@ -1,0 +1,14 @@
+{
+  "name": "Raids",
+  "link": "/raids",
+  "submenu": [
+    {
+      "name": "Builds",
+      "link": "/raids/builds"
+    },
+    {
+      "name": "Guides",
+      "link": "/raids/ailes"
+    }
+  ]
+}

@@ -1,0 +1,24 @@
+{
+  "id": "guardian",
+  "name": "Gardien",
+  "image": "../../images/professions/guardian.png",
+  "armor": "heavy",
+  "order": 3,
+  "specializations": [
+    {
+      "id": "dragonhunter",
+      "name": "Draconnier",
+      "image": "../../images/professions/dragonhunter.png"
+    },
+    {
+      "id": "firebrand",
+      "name": "Incendiaire",
+      "image": "../../images/professions/firebrand.png"
+    },
+    {
+      "id": "willbender",
+      "name": "Subjugueur",
+      "image": "../../images/professions/willbender.png"
+    }
+  ]
+}

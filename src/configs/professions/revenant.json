@@ -1,0 +1,24 @@
+{
+  "id": "revenant",
+  "name": "Revenant",
+  "image": "../../images/professions/revenant.png",
+  "armor": "heavy",
+  "order": 3,
+  "specializations": [
+    {
+      "id": "herald",
+      "name": "Héraut",
+      "image": "../../images/professions/herald.png"
+    },
+    {
+      "id": "renegade",
+      "name": "Renégat",
+      "image": "../../images/professions/renegade.png"
+    },
+    {
+      "id": "vindicator",
+      "name": "Justicier",
+      "image": "../../images/professions/vindicator.png"
+    }
+  ]
+}

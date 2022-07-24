@@ -1,0 +1,24 @@
+{
+  "id": "engineer",
+  "name": "Ingénieur",
+  "image": "../../images/professions/engineer.png",
+  "armor": "medium",
+  "order": 2,
+  "specializations": [
+    {
+      "id": "scrapper",
+      "name": "Mécatronicien",
+      "image": "../../images/professions/scrapper.png"
+    },
+    {
+      "id": "holosmith",
+      "name": "Holographiste",
+      "image": "../../images/professions/holosmith.png"
+    },
+    {
+      "id": "mechanist",
+      "name": "Méchamancien",
+      "image": "../../images/professions/mechanist.png"
+    }
+  ]
+}

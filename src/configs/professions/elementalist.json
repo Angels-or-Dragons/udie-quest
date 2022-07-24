@@ -1,0 +1,24 @@
+{
+  "id": "elementalist",
+  "name": "Elémentaliste",
+  "image": "../../images/professions/elementalist.png",
+  "armor": "light",
+  "order": 1,
+  "specializations": [
+    {
+      "id": "tempest",
+      "name": "Cataclyste",
+      "image": "../../images/professions/tempest.png"
+    },
+    {
+      "id": "weaver",
+      "name": "Tissesort",
+      "image": "../../images/professions/weaver.png"
+    },
+    {
+      "id": "catalyst",
+      "name": "Catalyseur",
+      "image": "../../images/professions/catalyst.png"
+    }
+  ]
+}

@@ -1,0 +1,24 @@
+{
+  "id": "ranger",
+  "name": "Rôdeur",
+  "image": "../../images/professions/ranger.png",
+  "armor": "medium",
+  "order": 2,
+  "specializations": [
+    {
+      "id": "druid",
+      "name": "Druide",
+      "image": "../../images/professions/druid.png"
+    },
+    {
+      "id": "soulbeast",
+      "name": "Animorphe",
+      "image": "../../images/professions/soulbeast.png"
+    },
+    {
+      "id": "untamed",
+      "name": "Indomptable",
+      "image": "../../images/professions/untamed.png"
+    }
+  ]
+}

@@ -1,0 +1,14 @@
+{
+  "name": "Fractals",
+  "link": "/fractals",
+  "submenu": [
+    {
+      "name": "Builds",
+      "link": "/fractals/builds"
+    },
+    {
+      "name": "Guides",
+      "link": "/fractals/ailes"
+    }
+  ]
+}

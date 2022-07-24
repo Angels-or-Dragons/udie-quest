@@ -1,0 +1,24 @@
+{
+  "id": "mesmer",
+  "name": "Envoûteur",
+  "image": "../../images/professions/mesmer.png",
+  "armor": "light",
+  "order": 1,
+  "specializations": [
+    {
+      "id": "chronomancer",
+      "name": "Chronomancien",
+      "image": "../../images/professions/chronomancer.png"
+    },
+    {
+      "id": "mirage",
+      "name": "Mirage",
+      "image": "../../images/professions/mirage.png"
+    },
+    {
+      "id": "virtuoso",
+      "name": "Virtuose",
+      "image": "../../images/professions/virtuoso.png"
+    }
+  ]
+}

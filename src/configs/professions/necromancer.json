@@ -1,0 +1,24 @@
+{
+  "id": "necromancer",
+  "name": "Nécromant",
+  "image": "../../images/professions/necromancer.png",
+  "armor": "light",
+  "order": 1,
+  "specializations": [
+    {
+      "id": "reaper",
+      "name": "Faucheur",
+      "image": "../../images/professions/reaper.png"
+    },
+    {
+      "id": "scourge",
+      "name": "Fléau",
+      "image": "../../images/professions/scourge.png"
+    },
+    {
+      "id": "harbinger",
+      "name": "Augure",
+      "image": "../../images/professions/harbinger.png"
+    }
+  ]
+}

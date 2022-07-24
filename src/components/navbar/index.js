@@ -1,5 +1,5 @@
 import React, { useState, useRef, useEffect, useContext } from 'react';
-import { Link } from 'gatsby';
+import { Link, useStaticQuery, graphql } from 'gatsby';
 import { Transition } from "@headlessui/react";
 import { StaticImage } from 'gatsby-plugin-image';
 // Toggle Theme
@@ -8,9 +8,25 @@ import { ThemeContext } from '../../context/themeContext';
 import { IoMdSunny } from 'react-icons/io';
 import { RiMoonClearFill } from 'react-icons/ri';
 // Data pour le menu (TODO - auto routes)
-import { navbarData } from './data';
+// import { menuData } from '../../../configs/menu';
 
-export default function Navbar(props) {
+export default function Navbar() {
+  const data = useStaticQuery(graphql`
+    query {
+      allMenusJson {
+        nodes {
+          link
+          name
+          submenu {
+            link
+            name
+          }
+        }
+      }
+    }
+  `);
+  const menuData = data.allMenusJson.nodes;
+  
   const ref = useRef();
   const [isOpen, setIsOpen] = useState(false);
 
@@ -28,11 +44,11 @@ export default function Navbar(props) {
 
   useEffect(() => {
     let subOpen = {};
-    for(let item in navbarData) {
+    for(let item in menuData) {
       subOpen[item.name] = false;
     }
     setIsSubOpen(subOpen);
-  },[])
+  },[menuData])
 
   return (
     <div>
@@ -43,6 +59,7 @@ export default function Navbar(props) {
               <div className="flex-shrink-0">
                 <Link to="/">
                 <StaticImage
+                  placeholder='none'
                   src='../../images/logo.png'
                   alt='UdieQuest'
                   height={50}
@@ -51,9 +68,9 @@ export default function Navbar(props) {
               </div>
               <div className="hidden md:block">
                 <div className="ml-10 flex items-baseline space-x-4">
-                  {navbarData.map((item, index) => {
+                  {menuData.map((item, index) => {
                     return (
-                      <div key={`item-${index}`} onMouseEnter={() => setIsSubOpen({[item.name]: true})} onMouseLeave={() => setIsSubOpen({[item.name]: false})}>
+                      <div key={`item-${index}`} role="presentation" onMouseEnter={() => setIsSubOpen({[item.name]: true})} onMouseLeave={() => setIsSubOpen({[item.name]: false})}>
                         <Link 
                           className=" cursor-pointer secondary-text hover:bg-primary hover:primary-text px-3 py-2 rounded-md text-sm font-medium"
                           to={`${item.link}`} 
@@ -148,9 +165,9 @@ export default function Navbar(props) {
         >
             <div className="md:hidden" id="mobile-menu">
               <div ref={ref} className="px-2 pt-2 pb-3 space-y-1 sm:px-3">
-              {navbarData.map((item, index) => {
+              {menuData.map((item, index) => {
                     return (
-                      <div key={`item-${index}`} onMouseEnter={() => setIsSubOpen({[item.name]: true})} onMouseLeave={() => setIsSubOpen({[item.name]: false})}>
+                      <div key={`item-${index}`} role="presentation" onMouseEnter={() => setIsSubOpen({[item.name]: true})} onMouseLeave={() => setIsSubOpen({[item.name]: false})}>
                         <Link 
                           className=" cursor-pointer secondary-text hover:bg-primary hover:primary-text block px-3 py-2 rounded-md text-base font-medium"
                           to={`${item.link}`} 
@@ -175,3 +192,4 @@ export default function Navbar(props) {
     </div>
   );
 }
+

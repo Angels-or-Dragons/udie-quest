@@ -1,0 +1,24 @@
+{
+  "id": "thief",
+  "name": "Voleur",
+  "image": "../../images/professions/thief.png",
+  "armor": "medium",
+  "order": 2,
+  "specializations": [
+    {
+      "id": "daredevil",
+      "name": "Fracasseur",
+      "image": "../../images/professions/daredevil.png"
+    },
+    {
+      "id": "deadeye",
+      "name": "Sniper",
+      "image": "../../images/professions/deadeye.png"
+    },
+    {
+      "id": "specter",
+      "name": "Spectre",
+      "image": "../../images/professions/specter.png"
+    }
+  ]
+}

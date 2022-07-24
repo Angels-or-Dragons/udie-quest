@@ -6,7 +6,7 @@ import Navbar from './navbar';
 import Header from './header';
 
 
-const Layout = ({ pageTitle, location, children }) => {
+const Layout = ({ pageTitle, baseline, location, children }) => {
 
   const data = useStaticQuery(graphql`
     query {
@@ -24,10 +24,9 @@ const Layout = ({ pageTitle, location, children }) => {
     <div className={`${theme === 'light' ? 'theme-light' : 'theme-dark' } bg-primary text-main-text transition-all duration-300 m-0 p-0 min-h-screen`}>
       <title>{pageTitle} | {data.site.siteMetadata.title}</title>
       <Navbar />
-      <Header location={location} pageTitle={pageTitle}/>
+      <Header location={location} pageTitle={pageTitle} baseline={baseline}/>
       <div className="container mx-auto">
         <main>
-          <h1>{pageTitle}</h1>
           {children}
         </main>
       </div>

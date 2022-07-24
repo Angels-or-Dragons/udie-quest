@@ -1,0 +1,24 @@
+{
+  "id": "warrior",
+  "name": "Guerrier",
+  "image": "../../images/professions/warrior.png",
+  "armor": "heavy",
+  "order": 3,
+  "specializations": [
+    {
+      "id": "berserker",
+      "name": "Berserker",
+      "image": "../../images/professions/berserker.png"
+    },
+    {
+      "id": "spellbreaker",
+      "name": "Brisesort",
+      "image": "../../images/professions/spellbreaker.png"
+    },
+    {
+      "id": "bladesworn",
+      "name": "Jurelame",
+      "image": "../../images/professions/bladesworn.png"
+    }
+  ]
+}

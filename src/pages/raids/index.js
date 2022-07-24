@@ -4,7 +4,11 @@ import Layout from '../../components/layout'
 
 const RaidIndexPage = ({location}) => {
   return (
-    <Layout location={location} pageTitle="Accueil Raids">
+    <Layout 
+      location={location}
+      pageTitle="Accueil Raids"
+      baseline="Pret pour du contenu HL de qualité?"
+    >
       <p>Accueil Raids</p>
       <nav>
         <ul>
