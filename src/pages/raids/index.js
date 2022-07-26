@@ -17,6 +17,8 @@ const RaidIndexPage = ({location}) => {
         </ul>
       </nav>
     </Layout>
+
+    
   )
 }
 

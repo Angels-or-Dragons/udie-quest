@@ -1,0 +1,31 @@
+{
+  "id":"berserker",
+  "name": "Berserker",
+  "ascended": {
+    "name": "Zojja",
+    "light": {
+      "boots": 48078,
+      "leggins": 48082,
+      "gloves": 48080,
+      "coat": 48079,
+      "shoulders": 48083,
+      "helm": 48081 
+    },
+    "medium": {
+      "boots": 48084,
+      "leggins": 48088,
+      "gloves": 48086,
+      "coat": 48085,
+      "shoulders": 48089,
+      "helm": 48087
+    },
+    "heavy": {
+      "boots": 48072,
+      "leggins": 48076,
+      "gloves": 48074,
+      "coat": 48073,
+      "shoulders": 48077,
+      "helm": 48075
+    }
+  }
+}
