@@ -56,4 +56,4 @@ jobs:
 
      # Finally, deploy it to your very own server
       - name: Deploy To Live
-        run: rsync -avzhn -e "ssh -p ${{ secrets.DEPLOY_PORT }}" ./public/ ${{ secrets.DEPLOY_USER }}@${{ secrets.DEPLOY_HOST }}:/var/www/${{ secrets.DEPLOY_PATH }}
+        run: rsync -avzh -e "ssh -p ${{ secrets.DEPLOY_PORT }}" ./public/ ${{ secrets.DEPLOY_USER }}@${{ secrets.DEPLOY_HOST }}:/var/www/${{ secrets.DEPLOY_PATH }}
