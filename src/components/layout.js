@@ -1,4 +1,4 @@
-import React, { useContext } from 'react';
+import React, { useContext, useEffect, useState } from 'react';
 import { useStaticQuery, graphql } from 'gatsby';
 
 import { ThemeContext } from '../context/themeContext';
@@ -7,6 +7,11 @@ import Header from './header';
 
 
 const Layout = ({ pageTitle, baseline, location, children }) => {
+  const [isClient, setClient] = useState(false);
+
+  useEffect(() => {
+    setClient(true);
+  }, []);
 
   const data = useStaticQuery(graphql`
     query {
@@ -19,10 +24,13 @@ const Layout = ({ pageTitle, baseline, location, children }) => {
   `)
 
   const { theme } = useContext(ThemeContext);
+  const title = `${pageTitle} | ${data.site.siteMetadata.title}`;
 
   return (
     <div className={`${theme === 'light' ? 'theme-light' : 'theme-dark' } bg-primary text-main-text transition-all duration-300 m-0 p-0 min-h-screen`}>
-      <title>{pageTitle} | {data.site.siteMetadata.title}</title>
+
+      { isClient && <title>{pageTitle} | {data.site.siteMetadata.title} </title> }
+      {/* <title>{pageTitle} | {data.site.siteMetadata.title} </title> */}
       <Navbar />
       <Header location={location} pageTitle={pageTitle} baseline={baseline}/>
       <div className="container mx-auto">

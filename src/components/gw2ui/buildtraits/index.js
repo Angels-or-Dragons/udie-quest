@@ -35,23 +35,31 @@ const BuildTraits = ({code}) => {
   }, []);
 
   return (
-    <div>
-      {build && 
-        build.specializations.map((specialization, index) => {
-          console.log(specialization.traits)
-        return (
-          <div key={index}>
-            <TraitLine
-              key={`traitline-${index}`}
-              defaultSelected= {specialization.traits}
-              id= {specialization.id}
-            />
-          </div>
-        )
-      })}
-    </div>
-      
-
+    // <div>
+    //   {build && 
+    //     build.specializations.map((specialization, index) => {
+    //       console.log(specialization.traits)
+    //     return (
+    //       <div key={index}>
+    //         <TraitLine
+    //           key={`traitline-${index}`}
+    //           defaultSelected= {specialization.traits}
+    //           id= {specialization.id}
+    //         />
+    //       </div>
+    //     )
+    //   })}
+    // </div>
+<TraitLine
+  defaultSelected={[
+    227,
+    214,
+    1672
+  ]}
+  id={41}
+  resettable
+  selectable
+/>
 
   )
 }
