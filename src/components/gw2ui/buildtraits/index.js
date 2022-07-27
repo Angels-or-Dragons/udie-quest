@@ -26,11 +26,12 @@ const BuildTraits = ({code}) => {
             }
           })
         })
+        setBuild(buildTemplate);
       })
       .catch(err => {
         console.log(err)
       })
-    setBuild(buildTemplate);
+    
   }, []);
 
   return (
@@ -39,11 +40,13 @@ const BuildTraits = ({code}) => {
         build.specializations.map((specialization, index) => {
           console.log(specialization.traits)
         return (
-          <TraitLine
-            key={index}
-            defaultSelected= {specialization.traits}
-            id= {specialization.id}
-          />
+          <div key={index}>
+            <TraitLine
+              key={`traitline-${index}`}
+              defaultSelected= {specialization.traits}
+              id= {specialization.id}
+            />
+          </div>
         )
       })}
     </div>
