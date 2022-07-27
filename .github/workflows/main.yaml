@@ -43,13 +43,17 @@ jobs:
       - name: Build Gatsby Site
         run: yarn run build
 
+
      # This was the hardest part for me to figure out - see article for more details
-      #- name: Install Deployment SSH Key
-      #  uses: shimataro/ssh-key-action@v2
-      #  with:
-      #    key: ${{secrets.DEPLOY_KEY}}
-      #    known_hosts: 'Just a placeholder'
+      - name: Install Deployment SSH Key
+        uses: shimataro/ssh-key-action@v2
+        with:
+          key: ${{secrets.DEPLOY_KEY}}
+          known_hosts: 'Just a placeholder'
+
+      - name: Adding Known Hosts
+        run: ssh-keyscan -p ${{ secrets.DEPLOY_PORT }} -H ${{ secrets.DEPLOY_HOST }} >> ~/.ssh/known_hosts
 
      # Finally, deploy it to your very own server
-      #- name: Deploy To Live
-      #  run: rsync -avzh --delete -e 'ssh -o StrictHostKeyChecking=no' public/* --rsync-path='mkdir -p ${{secrets.target_dir}} && rsync' ${{secrets.ssh_user}}@${{secrets.ssh_host}}:${{secrets.target_dir}}
+      - name: Deploy To Live
+        run: rsync -avzhn -e "ssh -p ${{ secrets.DEPLOY_PORT }}" ./public/ ${{ secrets.DEPLOY_PORT }}@${{ secrets.DEPLOY_USER }}@{{ secrets.DEPLOY_HOST }}:/var/www/{{ secrets.DEPLOY_PATH }}
