@@ -2,7 +2,7 @@ module.exports = {
   flags: {
     DEV_SSR: true
   },
-  trailingSlash: "always",
+  trailingSlash: "never",
   siteMetadata: {
     siteUrl: `https://udie.quest`,
     title: `Udie Quest`,
