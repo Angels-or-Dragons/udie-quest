@@ -24,7 +24,6 @@ const Layout = ({ pageTitle, baseline, location, children }) => {
   `)
 
   const { theme } = useContext(ThemeContext);
-  const title = `${pageTitle} | ${data.site.siteMetadata.title}`;
 
   return (
     <div className={`${theme === 'light' ? 'theme-light' : 'theme-dark' } bg-primary text-main-text transition-all duration-300 m-0 p-0 min-h-screen`}>

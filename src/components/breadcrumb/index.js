@@ -24,7 +24,7 @@ const BreadCrumb = ({ location }) => {
         {crumbs.map((item, index) => {
             
 
-            let link = crumbs[index - 1] === 'builds' ? `/${crumbs.slice(0, index).join('/')}?profession=${crumbs[index]}` : `/${crumbs.slice(0, index + 1).join('/')}`;
+            let link = crumbs[index - 1] === 'builds' ? `/${crumbs.slice(0, index).join('/')}/?profession=${crumbs[index]}` : `/${crumbs.slice(0, index + 1).join('/')}/`;
             let name = item.replace(/-/g, ' ').toUpperCase();
             return(
             <li key={`crumb-${index}`}>
